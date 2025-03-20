@@ -12,7 +12,7 @@ export class ProductService {
 
 
   getCategory(): Observable<any> {
-    const proxyUrl = 'https://corsproxy.io/'; // Free CORS proxy
+    const proxyUrl = 'https://corsproxy.io/'; 
     const apiUrl = environments.ServerApi + 'GetAllCategory';
     return this.http.get<any>(proxyUrl + apiUrl).pipe(
       catchError((error: HttpErrorResponse) => {
@@ -23,7 +23,7 @@ export class ProductService {
     );
   }
   getProducts(): Observable<any> {
-    const proxyUrl = 'https://corsproxy.io/'; // Free CORS proxy
+    const proxyUrl = 'https://corsproxy.io/'; 
     const apiUrl = environments.ServerApi + 'GetAllProducts';
     return this.http.get<any>(proxyUrl + apiUrl).pipe(
       catchError((error: HttpErrorResponse) => {
@@ -34,7 +34,7 @@ export class ProductService {
     );
   }
   saveProduct(obj: any): Observable<any> {
-    const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; // Free CORS proxy
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; 
     const apiUrl = environments.ServerApi + 'CreateProduct';
     return this.http.post<any>(proxyUrl + apiUrl,obj).pipe(
       catchError((error: HttpErrorResponse) => {

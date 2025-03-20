@@ -3,15 +3,14 @@ import { CommonModule } from '@angular/common';
 import { ProductService } from '../../../services/product/product.service';
 import { RouterOutlet,RouterLink } from '@angular/router';
 import { RouterModule,Router  } from '@angular/router';
-import { WebProductsComponent } from "../web-products/web-products.component";
 @Component({
-  selector: 'app-landing',
+  selector: 'app-web-products',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterModule, WebProductsComponent],
-  templateUrl: './landing.component.html',
-  styleUrl: './landing.component.css'
+  imports: [CommonModule,RouterLink,RouterModule],
+  templateUrl: './web-products.component.html',
+  styleUrl: './web-products.component.css'
 })
-export class LandingComponent {
+export class WebProductsComponent {
   categoryList: any []= [];
   productList: any[] = [];
 constructor(private productService: ProductService,private router: Router){}
