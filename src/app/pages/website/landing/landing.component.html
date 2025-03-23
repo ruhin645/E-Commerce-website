@@ -157,38 +157,7 @@
                 </ul>
               </ng-container>
             </li>
-            <span class="d-flex">
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle fw-semibold text-uppercase me-1"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <span class="text-dark fw-bold"
-                    ><i class="fa fa-user ms-3 me-1"></i
-                  ></span>
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item hand"> Profile </a></li>
-                  <li>
-                    <a
-                      class="dropdown-item hand"
-                      routerLink="/order-history"
-                      routerLinkActive="router-link-active"
-                    >
-                      Orders</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item ms-4">
-                <button class="btn btn-sm btn-danger logOutBtn">
-                  <i class="fa fa-sign-out" aria-hidden="true"></i>
-                </button>
-              </li>
-            </span>
+      
           </ng-container>
           <ng-container>
             <li class="nav-item dropdown">
@@ -208,10 +177,9 @@
               >
                 <li>
                   <div class="text-center">
-                    <a><button class="btn loginBtn rounded-2">Login</button></a>
+                    <a (click)="openLoginModal()"><button class="btn loginBtn rounded-2">Login</button></a>
                     <div class="regDiv">
-                      <span>New customer? </span
-                      ><a class="registerLink">Start here.</a>
+                      <span>New customer? </span><a class="registerLink" (click)="openRegisterModal()">Start here.</a>
                     </div>
                   </div>
                 </li>
@@ -227,5 +195,7 @@
   </nav>
 </header>
 
+
+
 <router-outlet></router-outlet>
-<app-web-products></app-web-products>
+

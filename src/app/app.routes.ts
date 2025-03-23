@@ -10,7 +10,7 @@ import { WebProductsComponent } from './pages/website/web-products/web-products.
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: 'shop',
+        redirectTo: 'Allproducts',
         pathMatch: 'full'
     },
     {

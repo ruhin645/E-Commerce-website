@@ -22,6 +22,18 @@ export class ProductService {
      
     );
   }
+  getProductsByCategory(id:number): Observable<any> {
+    const proxyUrl = 'https://corsproxy.io/'; 
+    const apiUrl = environments.ServerApi + 'GetAllProductsByCategoryId?id='+id;
+    console.log('API URL:', apiUrl);
+    return this.http.get<any>(proxyUrl + apiUrl).pipe(
+      catchError((error: HttpErrorResponse) => {
+        console.error('Error fetching categories:', error);
+        return throwError(() => new Error('Something went wrong while fetching categories.'));      
+      })      
+     
+    );
+  }
   getProducts(): Observable<any> {
     const proxyUrl = 'https://corsproxy.io/'; 
     const apiUrl = environments.ServerApi + 'GetAllProducts';
